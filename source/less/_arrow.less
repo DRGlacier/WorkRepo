@@ -1,0 +1,39 @@
+.arrow-to-top {
+	width: 60px;
+	height: 60px;
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+	position: fixed;
+	right: 15px;
+	bottom: 25px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s;
+	&::before {
+		position: absolute;
+		content: '';
+		background: #fff;
+		width: 4px;
+		border-radius: 10px;
+		height: 20px;
+		top: 18px;
+		left: 22px;
+		transform: rotate(45deg);
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		background: #fff;
+		width: 4px;
+		height: 20px;
+		top: 18px;
+		right: 22px;
+		border-radius: 10px;
+		transform: rotate(-45deg);
+	}
+}
+
+.active {
+	visibility: visible;
+	opacity: 1;
+}
